@@ -35,7 +35,7 @@ public class JsonDao implements IJsonDao {
 
         }
 
-        JsonObject element = getElement(key);
+        JsonObject element = getNullableElement(key);
 
         String valueOfKey = getValue(key);
 
@@ -54,7 +54,7 @@ public class JsonDao implements IJsonDao {
 
         }
 
-        JsonObject element = getElement(key);
+        JsonObject element = getNullableElement(key);
 
         String valueOfKey = getValue(key);
 
@@ -87,7 +87,7 @@ public class JsonDao implements IJsonDao {
 
         }
 
-        JsonObject element = getElementWithSetElementsIfAbsent(key);
+        JsonObject element = getElement(key);
 
         String valueOfKey = getValue(key);
 
@@ -97,7 +97,7 @@ public class JsonDao implements IJsonDao {
 
     }
 
-    private JsonObject getElement(JsonElement key) {
+    private JsonObject getNullableElement(JsonElement key) {
 
         JsonObject currentElement = data.getAsJsonObject();
 
@@ -139,7 +139,7 @@ public class JsonDao implements IJsonDao {
 
     }
 
-    private JsonObject getElementWithSetElementsIfAbsent(JsonElement key) {
+    private JsonObject getElement(JsonElement key) {
 
         JsonObject currentElement = data.getAsJsonObject();
 
