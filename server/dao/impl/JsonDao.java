@@ -87,7 +87,7 @@ public class JsonDao implements IJsonDao {
 
         }
 
-        JsonObject element = getElementAndSetBeforeIfAbsent(key);
+        JsonObject element = getElementWithSetElementsIfAbsent(key);
 
         String valueOfKey = getValue(key);
 
@@ -139,7 +139,7 @@ public class JsonDao implements IJsonDao {
 
     }
 
-    private JsonObject getElementAndSetBeforeIfAbsent(JsonElement key) {
+    private JsonObject getElementWithSetElementsIfAbsent(JsonElement key) {
 
         JsonObject currentElement = data.getAsJsonObject();
 

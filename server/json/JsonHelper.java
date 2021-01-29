@@ -6,9 +6,7 @@ import server.model.Response;
 
 public class JsonHelper {
 
-    private final Gson gson = new Gson();
-
-//    private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public Model toModel(String json) {
 

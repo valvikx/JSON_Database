@@ -35,13 +35,7 @@ public class DeleteCommand extends AbstractCommand{
 
         }
 
-        if (element != null) {
-
-            return new Response(OK);
-
-        }
-
-        return new Response(ERROR, NO_SUCH_KEY);
+        return element != null ? new Response(OK) : new Response(ERROR, NO_SUCH_KEY);
 
     }
 
